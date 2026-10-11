@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="郎宸，东北大学机器人科学与工程硕士，2027届。人形机器人强化学习、分层移动操作与真机部署的项目演示和技术笔记。">
+  <meta property="og:title" content="郎宸 | Chen Lang">
+  <meta property="og:description" content="人形机器人 · 强化学习 · 移动操作。项目演示与技术笔记。">
+  <title>郎宸 | Chen Lang</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#projects">跳转到项目</a>
+  <main class="page">
+    <header class="profile" id="home">
+      <h1>郎宸 <span>Chen Lang</span></h1>
+      <p class="affiliation">东北大学 · 机器人科学与工程硕士 · 2027 届</p>
+      <p class="research-interests">Humanoid Robotics · Reinforcement Learning · Loco-Manipulation</p>
+      <p class="bio">关注人形机器人的运动学习、自主规划与视觉感知，<br class="desktop-break">探索从仿真训练到真实机器人部署的完整链路。</p>
+      <nav aria-label="主页导航"><a href="mailto:lc13955069960@163.com">Email</a><a href="#projects">项目</a><a href="#notes">笔记</a><a href="#about">关于</a></nav>
+    </header>
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects <span>项目</span></h2>
+      <article class="project" id="carry">
+        <h3>机载视觉驱动的人形动态搬运</h3>
+        <p class="project-date">智元创新（上海） · 2026.05—2026.07</p>
+        <p class="project-description">通过 <b>Motion Matching</b> 拼接重定向动作，构建“行走—抓取—抱箱行走—放置”全流程技能；将 PPO 全身跟踪教师通过 <b>BCPPO</b> 蒸馏为指令驱动的学生。轻量 <b>Depth CNN</b> 回归 torso 系物体位姿，结合深度噪声对齐与域随机化，实现机载视觉驱动的多尺寸箱体搬运。</p>
+        <p class="project-result"><b>25—40 cm</b> 箱体真机搬运成功率 <b>85%+</b>，支持失败后自主调整重抓；验证集位置误差 <b>&lt;5 cm</b>。</p>
+        <p class="tech-stack">Motion Matching · PPO / BCPPO · Depth CNN · Domain Randomization · ROS</p>
+        <button class="text-link" data-project="carry">查看项目详情 →</button>
+<div class="video-grid "><figure><video controls playsinline muted preload="none" poster="assets/videos/carry-real-close.jpg" aria-label="机载视觉搬运 · 真机近景"><source src="assets/videos/carry-real-close.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/carry-real-close.mp4">下载视频</a>。</video><figcaption>机载视觉搬运 · 真机近景</figcaption></figure><figure><video controls playsinline muted preload="none" poster="assets/videos/carry-real-wide.jpg" aria-label="连续搬运 · 真机全景"><source src="assets/videos/carry-real-wide.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/carry-real-wide.mp4">下载视频</a>。</video><figcaption>连续搬运 · 真机全景</figcaption></figure></div>
+<details class="extra-videos"><summary>更多视频：仿真、深度感知与导航搬运</summary><div class="video-grid three"><figure><video controls playsinline muted preload="none" poster="assets/videos/carry-sim.jpg" aria-label="搬运策略 · 仿真"><source src="assets/videos/carry-sim.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/carry-sim.mp4">下载视频</a>。</video><figcaption>搬运策略 · 仿真</figcaption></figure><figure><video controls playsinline muted preload="none" poster="assets/videos/carry-depth.jpg" aria-label="深度感知 · 仿真"><source src="assets/videos/carry-depth.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/carry-depth.mp4">下载视频</a>。</video><figcaption>深度感知 · 仿真</figcaption></figure><figure><video controls playsinline muted preload="none" poster="assets/videos/navigation-carry.jpg" aria-label="导航搬运 · 补充真机演示"><source src="assets/videos/navigation-carry.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/navigation-carry.mp4">下载视频</a>。</video><figcaption>导航搬运 · 补充真机演示</figcaption></figure></div></details>
+      </article>
+      <article class="project" id="dirt">
+        <h3>DiRT：条件扩散驱动的分层多技能移动操作</h3>
+        <p class="project-date">智元创新（上海） · 2026.07—2026.09</p>
+        <p class="project-description">面向 X2 人形机器人，以 <b>DiT + DDIM</b> 条件扩散生成器规划未来 <b>8×44D 末端—接触命令</b>，通过 <b>PPO / BCPPO</b> 训练共享全身 Tracker，统一覆盖搬运、推箱与踢球。高层 5 Hz 重规划、低层 50 Hz 控制，结合深度 CNN 与 RGB AprilTag 进行感知适配。</p>
+        <p class="project-result">随机化条件下三类任务的<b>仿真成功率均达 80%+</b>；远端工作站实测扩散规划延迟约 <b>67 ms</b>。</p>
+        <p class="tech-stack">DiT / DDIM · PPO / BCPPO · PyTorch · Isaac Lab · MuJoCo · RGB-D</p>
+        <button class="text-link" data-project="dirt">查看项目详情 →</button>
+<div class="video-grid three"><figure><video controls playsinline muted preload="none" poster="assets/videos/dirt-carry.jpg" aria-label="搬箱 · 仿真"><source src="assets/videos/dirt-carry.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/dirt-carry.mp4">下载视频</a>。</video><figcaption>搬箱 · 仿真</figcaption></figure><figure><video controls playsinline muted preload="none" poster="assets/videos/dirt-push.jpg" aria-label="推箱 · 仿真"><source src="assets/videos/dirt-push.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/dirt-push.mp4">下载视频</a>。</video><figcaption>推箱 · 仿真</figcaption></figure><figure><video controls playsinline muted preload="none" poster="assets/videos/dirt-kick.jpg" aria-label="踢球 · 仿真"><source src="assets/videos/dirt-kick.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/dirt-kick.mp4">下载视频</a>。</video><figcaption>踢球 · 仿真</figcaption></figure></div>
+      </article>
+      <article class="project" id="amp">
+        <h3>AMP 风格约束下的人形走跑策略与视觉巡线</h3>
+        <p class="project-date">2026.03—2026.05</p>
+        <p class="project-description">基于 <b>AMP-PPO</b> 分别训练后退、行走、慢跑与快跑教师，利用人类运动先验约束步态风格；通过速度条件门控与 <b>MoE + DAgger</b> 蒸馏为统一策略，并导出 <b>TorchScript</b> 在 MuJoCo 中验证。RGB 跑道边界拟合生成走廊表示，驱动速度指令预测与运动控制闭环。</p>
+        <p class="project-result">统一 <b>4 类技能专家</b>，策略以 <b>50 Hz</b> 控制；训练指令覆盖 −1 至 4.5 m/s。视频素材展示走跑仿真。</p>
+        <p class="tech-stack">AMP-PPO · MoE / DAgger · RSL-RL · Isaac Lab · MuJoCo · TorchScript</p>
+        <button class="text-link" data-project="amp">查看项目详情 →</button>
+<div class="video-grid "><figure><video controls playsinline muted preload="none" poster="assets/videos/amp-moe.jpg" aria-label="MoE 统一学生 · 仿真"><source src="assets/videos/amp-moe.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/amp-moe.mp4">下载视频</a>。</video><figcaption>MoE 统一学生 · 仿真</figcaption></figure><figure><video controls playsinline muted preload="none" poster="assets/videos/amp-fast-run.jpg" aria-label="快跑教师 · 仿真"><source src="assets/videos/amp-fast-run.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/amp-fast-run.mp4">下载视频</a>。</video><figcaption>快跑教师 · 仿真</figcaption></figure></div>
+<details class="extra-videos"><summary>更多视频：行走、慢跑与后退</summary><div class="video-grid three"><figure><video controls playsinline muted preload="none" poster="assets/videos/amp-walk.jpg" aria-label="行走教师 · 仿真"><source src="assets/videos/amp-walk.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/amp-walk.mp4">下载视频</a>。</video><figcaption>行走教师 · 仿真</figcaption></figure><figure><video controls playsinline muted preload="none" poster="assets/videos/amp-run.jpg" aria-label="慢跑教师 · 仿真"><source src="assets/videos/amp-run.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/amp-run.mp4">下载视频</a>。</video><figcaption>慢跑教师 · 仿真</figcaption></figure><figure><video controls playsinline muted preload="none" poster="assets/videos/amp-backward.jpg" aria-label="后退教师 · 仿真"><source src="assets/videos/amp-backward.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/amp-backward.mp4">下载视频</a>。</video><figcaption>后退教师 · 仿真</figcaption></figure></div></details>
+      </article>
+      <article class="project" id="air">
+        <h3>分层异构多智能体空战博弈策略生成</h3>
+        <p class="project-date">南栖仙策 × 沈飞研究院（601） · 2025.03—2025.08</p>
+        <p class="project-description">使用 <b>C++ / Pybind11</b> 构建多进程向量化空战环境，上层 <b>HAPPO</b> 结合多阶段课程学习调度战术意图，下层 <b>PPO</b> 输出连续飞行控制。通过动作掩码与势函数奖励实现平滑执行，并将高层神经策略蒸馏为可解释决策树。</p>
+        <p class="project-result">相比行为树基线，胜率提升 <b>35%</b>；获胜对局中高价值飞机生存率达 <b>95%</b>。前期工作已投稿 IEEE CEC。</p>
+        <p class="tech-stack">HAPPO / PPO · C++ / Pybind11 · Curriculum Learning · Decision Tree Distillation</p>
+        <button class="text-link" data-project="air">查看项目详情 →</button>
+<div class="video-grid "><figure><video controls playsinline muted preload="none" poster="assets/videos/air-1v2.jpg" aria-label="1v2 对抗 · 仿真"><source src="assets/videos/air-1v2.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/air-1v2.mp4">下载视频</a>。</video><figcaption>1v2 对抗 · 仿真</figcaption></figure><figure><video controls playsinline muted preload="none" poster="assets/videos/air-2v2.jpg" aria-label="2v2 协同对抗 · 仿真"><source src="assets/videos/air-2v2.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/air-2v2.mp4">下载视频</a>。</video><figcaption>2v2 协同对抗 · 仿真</figcaption></figure></div>
+      </article>
+    </section>
+    <section class="notes" id="notes" aria-labelledby="notes-title">
+      <h2 id="notes-title">Notes <span>技术笔记</span></h2>
+      <ul class="note-list"><li><button data-article="interface">为什么用末端—接触命令连接规划与控制？</button><span>DiRT · 系统设计</span></li><li><button data-article="depth">把深度位姿估计接入搬运策略</button><span>Carry Box · 感知部署</span></li><li><button data-article="moe">从分技能专家到一个会走会跑的学生</button><span>AMP · 策略蒸馏</span></li></ul>
+    </section>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About <span>关于</span></h2>
+      <p>东北大学机器人科学与工程硕士（推免，2024.09—2027.06 预计），本科毕业于大连交通大学机械电子工程专业（2020.09—2024.06）。求职方向为机器人算法、强化学习与具身智能。</p>
+      <p><b>开发与仿真：</b>Python · C++ · PyTorch · RSL-RL · Isaac Lab / Sim · MuJoCo · ROS · Linux · Git · Docker。</p>
+      <p><b>荣誉：</b>研究生一等奖学金 · RoboMaster 南部分区赛亚军 · CET-6（518）。</p>
+      <p><b>联系：</b><a href="mailto:lc13955069960@163.com">lc13955069960@163.com</a></p>
+    </section>
+    <footer>© 2026 郎宸 · Chen Lang <a href="#home">返回顶部</a></footer>
+  </main>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-toolbar"><span id="dialog-kind">项目详情</span><button id="close-dialog" aria-label="关闭详情">×</button></div><div id="dialog-content" class="dialog-content"></div></dialog>
+</body>
+</html>
