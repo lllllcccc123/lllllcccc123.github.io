@@ -28,7 +28,7 @@
     else { dialog.close(); history.replaceState(null, '', '#projects'); }
   }
   function syncHash() {
-    const match = location.hash.match(/^#(project|note)-([a-z]+)$/);
+    const match = location.hash.match(/^#(project)-([a-z]+)$/);
     if (match) {
       if (renderDetail(match[1] === 'project' ? 'projects' : 'articles', match[2])) return;
     }
@@ -36,7 +36,6 @@
   }
 
   document.querySelectorAll('[data-project]').forEach(button => button.addEventListener('click', () => openDetail('projects', button.dataset.project, button)));
-  document.querySelectorAll('[data-article]').forEach(button => button.addEventListener('click', () => openDetail('articles', button.dataset.article, button)));
   closeButton.addEventListener('click', closeDetail);
   dialog.addEventListener('cancel', event => { event.preventDefault(); closeDetail(); });
   dialog.addEventListener('click', event => {
@@ -81,5 +80,5 @@
       });
     });
   }, {rootMargin:'-15% 0px -55% 0px'});
-  ['projects','notes','about'].forEach(id => observer.observe(document.getElementById(id)));
+  ['projects','about'].forEach(id => observer.observe(document.getElementById(id)));
 })();
