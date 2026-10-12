@@ -38,7 +38,7 @@ BC 对齐 → Critic 预热 → BC + PPO 联合训练
     },
     amp: {
       title: "AMP 风格约束下的走跑策略与视觉巡线",
-      subtitle: "2026.03—2026.05 · X2 29-DOF · 运动学习 / 视觉闭环",
+      subtitle: "X2 29-DOF · 运动学习 / 视觉闭环",
       lead: "在速度跟踪中引入人类运动先验，将分技能教师蒸馏为统一的 MoE 学生，再将 RGB 跑道线感知接入运动控制。",
       tags: ["AMP-PPO", "MoE", "DAgger", "PyTorch / RSL-RL", "Isaac Lab", "MuJoCo", "TorchScript", "RGB"],
       metrics: [["4", "技能专家", "后退 / 行走 / 慢跑 / 快跑"], ["−1—4.5 m/s", "训练指令范围", "技术笔记中的配置范围"], ["50 Hz", "策略控制频率", "训练与 sim2sim 保持一致"]],
