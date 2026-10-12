@@ -20,15 +20,4 @@
   document.querySelectorAll('.extra-videos').forEach(details => details.addEventListener('toggle', () => {
     if (!details.open) details.querySelectorAll('video').forEach(video => video.pause());
   }));
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      document.querySelectorAll('nav a[href^="#"]').forEach(a => {
-        if (a.getAttribute('href') === `#${entry.target.id}`) a.setAttribute('aria-current','location');
-        else a.removeAttribute('aria-current');
-      });
-    });
-  }, {rootMargin:'-15% 0px -55% 0px'});
-  observer.observe(document.getElementById('projects'));
 })();
