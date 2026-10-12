@@ -3,7 +3,7 @@ window.portfolioContent = {
   projects: {
     dirt: {
       title: "DiRT：条件扩散驱动的分层移动操作",
-      subtitle: "2026.07—2026.09 · 智元创新（上海） · 人形机器人 / 自主规划",
+      subtitle: "人形机器人 / 自主规划",
       lead: "以统一的末端—接触命令空间连接自主规划和全身执行，让一套共享的高低层模型覆盖双手搬运、前臂推箱与足部踢球。",
       tags: ["DiT", "DDIM", "PPO", "BCPPO", "PyTorch", "Isaac Lab", "MuJoCo", "RGB-D / AprilTag"],
       metrics: [
@@ -24,7 +24,7 @@ window.portfolioContent = {
     },
     carry: {
       title: "机载视觉驱动的人形动态搬运",
-      subtitle: "2026.05—2026.07 · 智元创新（上海） · Loco-Manipulation / Sim-to-Real",
+      subtitle: "Loco-Manipulation / Sim-to-Real",
       lead: "构建行走、抓取、抱箱行走与放置的完整技能，用机载深度感知与外部指令驱动多尺寸箱体搬运。",
       tags: ["Motion Matching", "PPO / BCPPO", "Depth CNN", "Domain Randomization", "Isaac Lab", "MuJoCo", "ROS"],
       metrics: [["85%+", "整体真机任务成功率", "连续搬运与失败后重抓"], ["25—40 cm", "真机箱体尺寸范围", "多尺寸箱体"], ["<5 cm", "验证集位置误差", "位姿网络离线验证"]],
@@ -54,7 +54,7 @@ BC 对齐 → Critic 预热 → BC + PPO 联合训练
     },
     air: {
       title: "分层异构多智能体空战博弈策略生成",
-      subtitle: "2025.03—2025.08 · 南栖仙策 × 沈飞研究院（601） · 多智能体强化学习",
+      subtitle: "多智能体强化学习",
       lead: "在高动态、连续控制的空战仿真中，使用分层强化学习组织异构智能体的协同战术与低层飞行控制。",
       tags: ["HAPPO", "PPO", "C++", "Pybind11", "多进程向量化", "课程学习", "决策树蒸馏"],
       metrics: [["35%", "对比基线胜率提升", "行为树基线 · 简历原始口径"], ["95%", "高价值飞机生存率", "在获胜对局中统计"], ["IEEE CEC", "前期工作已投稿", "投稿状态，非录用声明"]],

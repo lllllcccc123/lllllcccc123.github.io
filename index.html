@@ -24,7 +24,6 @@
       <h2 id="projects-title">Projects <span>项目</span></h2>
       <article class="project" id="carry">
         <h3>机载视觉驱动的人形动态搬运</h3>
-        <p class="project-date">智元创新（上海） · 2026.05—2026.07</p>
         <p class="project-description">通过 <b>Motion Matching</b> 拼接重定向动作，构建“行走—抓取—抱箱行走—放置”全流程技能；将 PPO 全身跟踪教师通过 <b>BCPPO</b> 蒸馏为指令驱动的学生。轻量 <b>Depth CNN</b> 回归 torso 系物体位姿，结合深度噪声对齐与域随机化，实现机载视觉驱动的多尺寸箱体搬运。</p>
         <p class="tech-stack">Motion Matching · PPO / BCPPO · Depth CNN · Domain Randomization · ROS</p>
 <div class="video-grid "><figure><video controls playsinline muted preload="none" poster="assets/videos/carry-real-close.jpg" aria-label="机载视觉搬运 · 真机近景"><source src="assets/videos/carry-real-close.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/carry-real-close.mp4">下载视频</a>。</video><figcaption>机载视觉搬运 · 真机近景</figcaption></figure><figure><video controls playsinline muted preload="none" poster="assets/videos/carry-real-wide.jpg" aria-label="连续搬运 · 真机全景"><source src="assets/videos/carry-real-wide.mp4" type="video/mp4">浏览器不支持视频播放，<a href="assets/videos/carry-real-wide.mp4">下载视频</a>。</video><figcaption>连续搬运 · 真机全景</figcaption></figure></div>
@@ -32,7 +31,6 @@
       </article>
       <article class="project" id="dirt">
         <h3>DiRT：条件扩散驱动的分层多技能移动操作</h3>
-        <p class="project-date">智元创新（上海） · 2026.07—2026.09</p>
         <p class="project-description">面向 X2 人形机器人，以 <b>DiT + DDIM</b> 条件扩散生成器规划未来 <b>8×44D 末端—接触命令</b>，通过 <b>PPO / BCPPO</b> 训练共享全身 Tracker，统一覆盖搬运、推箱与踢球等任务。高层 5 Hz 重规划、低层 50 Hz 控制，结合深度 CNN 与 RGB AprilTag 进行感知适配。</p>
         <p class="project-result">随机化条件下三类任务的<b>仿真成功率均达 88%+</b>；远端工作站实测扩散规划延迟约 <b>67 ms</b>。</p>
         <p class="tech-stack">DiT / DDIM · PPO / BCPPO · PyTorch · Isaac Lab · MuJoCo · RGB-D</p>
@@ -49,7 +47,6 @@
       </article>
       <article class="project" id="air">
         <h3>分层异构多智能体空战博弈策略生成</h3>
-        <p class="project-date">南栖仙策 × 沈飞研究院（601） · 2025.03—2025.08</p>
         <p class="project-description">使用 <b>C++ / Pybind11</b> 构建多进程向量化空战环境，上层 <b>HAPPO</b> 结合多阶段课程学习调度战术意图，下层 <b>PPO</b> 输出连续飞行控制。通过动作掩码与势函数奖励实现平滑执行，并将高层神经策略蒸馏为可解释决策树。</p>
         <p class="project-result">相比行为树基线，胜率提升 <b>35%</b>；获胜对局中高价值飞机生存率达 <b>95%</b>。前期工作已投稿 IEEE CEC。</p>
         <p class="tech-stack">HAPPO / PPO · C++ / Pybind11 · Curriculum Learning · Decision Tree Distillation</p>
