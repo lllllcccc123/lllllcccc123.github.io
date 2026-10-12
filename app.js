@@ -30,5 +30,5 @@
       });
     });
   }, {rootMargin:'-15% 0px -55% 0px'});
-  ['projects','about'].forEach(id => observer.observe(document.getElementById(id)));
+  observer.observe(document.getElementById('projects'));
 })();
