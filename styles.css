@@ -5,5 +5,3 @@
 
 /* Project summaries precede their demonstrations. */
 .project>h3{margin-top:0}.project>.video-grid{margin-top:20px}
-
-.site-stats{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px 16px;margin-top:8px;color:#888;font-size:11px}.site-stats>span{white-space:nowrap}.site-stats a{margin-left:0;font-size:10px;color:#888}.site-stats [id]{font-variant-numeric:tabular-nums}
