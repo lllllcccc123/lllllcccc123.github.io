@@ -11,6 +11,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <script src="analytics.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#projects">跳转到项目</a>
@@ -100,7 +101,14 @@
         </div>
       </article>
     </section>
-    <footer>© 2026 郎宸 · Chen Lang <a href="#home">返回顶部</a></footer>
+    <footer>
+      <p>© 2026 郎宸 · Chen Lang <a href="#home">返回顶部</a></p>
+      <p class="site-stats" aria-label="网站访问统计" aria-live="polite" title="自 2026 年 10 月 20 日接入统计；访客数按统计服务口径计算。">
+        <span>浏览次数 <span id="busuanzi_value_site_pv">—</span> 次</span>
+        <span>访客数 <span id="busuanzi_value_site_uv">—</span> 人</span>
+        <a class="stats-provider" href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener noreferrer">统计：不蒜子</a>
+      </p>
+    </footer>
   </main>
 </body>
 </html>
